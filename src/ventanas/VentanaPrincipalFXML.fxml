@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml" fx:controller="ventanas.VentanaPrincipalFXMLController">
+  <children>
+    <BorderPane prefHeight="400.0" prefWidth="600.0">
+      <bottom>
+        <ToolBar fx:id="toolBar" blendMode="DIFFERENCE">
+          <items>
+            <Button fx:id="botonCopiarDatos" mnemonicParsing="false" onAction="#handlebotonCopiar" prefWidth="95.0" text="Copiar Datos" />
+            <Button id="BotonCancelar" fx:id="botonCancelar" mnemonicParsing="false" onAction="#handlebotonCancelar" prefWidth="81.0" text="Cancelar" />
+          </items>
+        </ToolBar>
+      </bottom>
+      <center>
+        <TitledPane fx:id="PanelMysql" animated="false" collapsible="false" prefHeight="268.0" prefWidth="600.0" text="MySql">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <Label layoutX="14.0" layoutY="14.0" text="Nombre del servidor/ Ip:" />
+                <TextField fx:id="boxServidorMysql" layoutX="159.0" layoutY="11.0" prefWidth="200.0" />
+                <Label layoutX="14.0" layoutY="45.0" text="Nombre BBDD:" />
+                <Label layoutX="14.0" layoutY="113.0" text="Usuario:" />
+                <Label layoutX="14.0" layoutY="142.0" text="Password:" />
+                <TextField fx:id="boxNombreBBDDMysql" layoutX="159.0" layoutY="42.0" prefWidth="200.0" />
+                <CheckBox fx:id="checkAutentificacionMysql" layoutX="159.0" layoutY="86.0" mnemonicParsing="false" onAction="#handlecheckAutentificacionMysql" text="Usar Autentificación" />
+                <TextField fx:id="boxUsuarioMysql" layoutX="159.0" layoutY="110.0" prefWidth="200.0" />
+                <PasswordField fx:id="boxPasswordMysql" layoutX="159.0" layoutY="139.0" prefWidth="200.0" />
+                <Button fx:id="botonProbarMySql" layoutX="159.0" layoutY="171.0" mnemonicParsing="false" onAction="#handlebotonProbarMysql" prefWidth="81.0" text="Probar" />
+                <Button id="botonVerDatosMySQL" fx:id="botonVerDatosMysql" layoutX="278.0" layoutY="171.0" mnemonicParsing="false" onAction="#handlebotonVerDatosMysql" prefWidth="81.0" text="Ver Datos" />
+              </children>
+            </AnchorPane>
+          </content>
+        </TitledPane>
+      </center>
+      <top>
+        <TitledPane fx:id="PanelSQLLite" animated="false" collapsible="false" prefHeight="99.0" prefWidth="600.0" text="SQLLite">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="75.0" prefWidth="596.0">
+              <children>
+                <Label layoutX="14.0" layoutY="14.0" text="Ruta al fichero de bbdd:" />
+                <TextField id="boxRutaFichero" fx:id="boxRutaFicheroSQLLite" editable="false" layoutX="156.0" layoutY="11.0" prefWidth="200.0" />
+                <Button fx:id="botonExplorarSQLLite" layoutX="366.0" layoutY="12.0" mnemonicParsing="false" onAction="#handlebotonExplorarSQLLite" prefWidth="81.0" text="Explorar" />
+                <Button fx:id="botonProbarSQLLite" layoutX="156.0" layoutY="38.0" mnemonicParsing="false" onAction="#handlebotonProbarSQLLite" prefWidth="81.0" text="Probar" />
+                <Button fx:id="botonVerDatosSQLLite" layoutX="276.0" layoutY="38.0" mnemonicParsing="false" onAction="#handlebotonVerDatosSQLLite" prefWidth="81.0" text="Ver Datos" />
+              </children>
+            </AnchorPane>
+          </content>
+        </TitledPane>
+      </top>
+    </BorderPane>
+  </children>
+</AnchorPane>
